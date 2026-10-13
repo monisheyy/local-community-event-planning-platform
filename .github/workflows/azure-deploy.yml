@@ -56,6 +56,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    # Skipped until the Azure settings exist, so the build still shows green
+    if: ${{ vars.AZURE_WEBAPP_NAME != '' }}
     environment: production
     steps:
       - uses: actions/download-artifact@v4
