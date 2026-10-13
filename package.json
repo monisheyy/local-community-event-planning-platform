@@ -1,0 +1,17 @@
+{
+  "name": "local-community-event-planning-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Community Event Planning Platform - Vite + React frontend, Node.js/Express API, Microsoft Azure (App Service, Azure SQL Database, Blob Storage)",
+  "scripts": {
+    "setup": "npm install && npm install --prefix backend && npm install --prefix frontend && npm run db:reset --prefix backend",
+    "dev": "concurrently -n api,web -c yellow,cyan \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run build && npm start --prefix backend",
+    "test": "npm test --prefix backend",
+    "build:azure": "node scripts/prepare-azure.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
