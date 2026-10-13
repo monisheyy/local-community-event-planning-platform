@@ -65,6 +65,8 @@ npm run dev
 
 Open **http://localhost:5173**.
 
+**On Windows you can just double-click `start-windows.bat`.** It installs everything on the first run, starts the app and opens http://localhost:4000 in your browser.
+
 To run it the way it runs on Azure, with one server serving both the API and the built React app:
 
 ```bash
